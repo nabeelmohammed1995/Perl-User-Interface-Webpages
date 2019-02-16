@@ -1,0 +1,199 @@
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Orbitron:700|Arizonia' rel='stylesheet' type='text/css'>
+-<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<style type="text/css">
+h1{font-family:'Orbitron';
+   font-size:60px;}
+ h4{font-family:'Abel';}
+</style>
+</head>
+<body>
+<h1 align="center"><strong>Environment</strong></h1>
+<h4>The overall structure of Perl derives broadly from C. Perl is procedural in nature, with variables, expressions, assignment statements, brace-delimited blocks, control structures, and subroutines.
+Perl also takes features from shell programming. All variables are marked with leading sigils, which allow variables to be interpolated directly into strings. However, unlike the shell, Perl uses sigils on all accesses to variables, and unlike most other programming languages that use sigils, the sigil doesn't denote the type of the variable but the type of the expression. So for example, to access a list of values in a hash, the sigil for an array ("@") is used, not the sigil for a hash ("%"). Perl also has many built-in functions that provide tools often used in shell programming (although many of these tools are implemented by programs external to the shell) such as sorting, and calling on operating system facilities.
+Perl takes lists from Lisp, hashes ("associative arrays") from AWK, and regular expressions from sed.<p> These simplify and facilitate many parsing, text-handling, and data-management tasks. Also shared with Lisp are the implicit return of the last value in a block, and the fact that all statements have a value, and thus are also expressions and can be used in larger expressions themselves.
+Perl 5 added features that support complex data structures, first-class functions (that is, closures as values), and an object-oriented programming model. These include references, packages, class-based method dispatch, and lexically scoped variables, along with compiler directives (for example, the strict pragma). A major additional feature introduced with Perl 5 was the ability to package code as reusable modules. Wall later stated that "The whole intent of Perl 5's module system was to encourage the growth of Perl culture rather than the Perl core."[56]
+All versions of Perl do automatic data-typing and automatic memory management. The interpreter knows the type and storage requirements of every data object in the program; it allocates and frees storage for them as necessary using reference counting (so it cannot deallocate circular data structures without manual intervention). Legal type conversions — for example, conversions from number to string — are done automatically at run time; illegal type conversions are fatal errors.
+<p>A good setup for Perl on Windows (32 and 64 bit):<br/>Before we start writing our Perl programs, let's understand how to setup our Perl environment. Perl is available on a wide variety of platforms:
+
+Unix (Solaris, Linux, FreeBSD, AIX, HP/UX, SunOS, IRIX etc.)
+
+
+Win 9x/NT/2000/
+
+
+WinCE
+
+
+Macintosh (PPC, 68K)
+
+
+Solaris (x86, SPARC)
+
+
+OpenVMS
+
+
+Alpha (7.2 and later)
+
+
+Symbian
+
+
+Debian GNU/kFreeBSD
+
+
+MirOS BSD
+
+
+And many more...
+
+
+This is more likely that your system will have perl installed on it. Just try giving following command at the $ prompt:
+$perl -v
+
+If you have perl installed on your machine then you will get a message something as follows:
+This is perl 5, version 16, subversion 2 (v5.16.2) built for i686-linux
+
+Copyright 1987-2012, Larry Wall
+
+Perl may be copied only under the terms of either the Artistic License or the
+GNU General Public License, which may be found in the Perl 5 source kit.
+
+Complete documentation for Perl, including FAQ lists, should be found on
+this system using "man perl" or "perldoc perl".  If you have access to the
+Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+
+If you do not have perl already installed then proceed to the next section.
+
+Getting Perl Installation
+
+The most up-to-date and current source code, binaries, documentation, news, etc. is available at the official website of Perl:
+
+Perl Official Website : http://www.perl.org/
+
+You can download Perl documentation from the following site.
+
+Perl Documentation Website : http://perldoc.perl.org
+
+Install Perl:
+
+Perl distribution is available for a wide variety of platforms. You need to download only the binary code applicable for your platform and install Perl.
+
+If the binary code for your platform is not available, you need a C compiler to compile the source code manually. Compiling the source code offers more flexibility in terms of choice of features that you require in your installation.
+
+Here is a quick overview of installing Perl on various platforms:
+
+Unix & Linux Installation
+
+Here are the simple steps to install Perl on Unix/Linux machine.
+
+Open a Web browser and go to http://www.perl.org/get.html
+
+
+Follow the link to download zipped source code available for Unix/Linux.
+
+
+Download perl-5.x.y.tar.gz file and issue the following commands at $ prompt.
+
+$tar -xzf perl-5.x.y.tar.gz
+$cd perl-5.x.y
+$./Configure -de
+$make
+$make test
+$make install
+
+NOTE:  Here $ is Unix prompt where you type your command, so make sure you are not typing $ while typing above mentioned commands.
+
+This will install Perl in a standard location /usr/local/bin and its libraries are installed in /usr/local/lib/perlXX where XX is the version of Perl that you are using.
+
+It will take a while to compile the source code after issuing make command. Once installation is done, you can issue perl -v command at $ prompt to check perl installation. If everything is fine then it will display message like I have shown above.
+
+Windows Installation:
+
+Here are the steps to install Perl on Windows machine.
+
+Follow the link for the Strawberry Perl installation on Windows http://strawberryperl.com
+
+
+Download either 32bit or 64bit version of installation.
+
+
+Run the downloaded file by double-clicking it in Windows Explorer. This brings up the Perl install wizard, which is really easy to use. Just accept the default settings, wait until the install is finished, and you're ready to roll!
+
+
+Macintosh Installation
+
+In order to build your own version of Perl you will need 'make' this is part of the Apples developer tools usually supplied with Mac OS install DVDs. You do not need the latest version of Xcode (which is now charged for) in order to install make.
+
+Here are the simple steps to install Perl on Mac OS X machine.
+
+Open a Web browser and go to http://www.perl.org/get.html
+
+
+Follow the link to download zipped source code available for Mac OS X.
+
+
+Download perl-5.x.y.tar.gz file and issue the following commands at $ prompt.
+
+$tar -xzf perl-5.x.y.tar.gz
+$cd perl-5.x.y
+$./Configure -de
+$make
+$make test
+$make install
+
+This will install Perl in a standard location /usr/local/bin and its libraries are installed in /usr/local/lib/perlXX where XX is the version of Perl that you are using.
+
+Running Perl
+
+There are following different ways to start Perl:
+
+(1) Interactive Interpreter:
+
+You can enter perl and start coding right away in the interactive interpreter by starting it from the command line. You can do this from Unix, DOS, or any other system which provides you a command-line interpreter or shell window.
+$perl  -e <perl code>           # Unix/Linux
+
+or 
+
+C:>perl -e <perl code>          # Windows/DOS
+
+Here is the list of all the available command line options:
+
+
+Option
+
+Description
+
+-d[:debugger] Run program under debugger 
+-Idirectory Specify @INC/#include directory 
+-T Enable tainting checks 
+-t Enable tainting warnings 
+-U Allow unsafe operations 
+-w Enable many useful warnings 
+-W Enable all warnings 
+-X Disable all warnings 
+-e program run Perl script sent in as program 
+file run Perl script from a given file 
+
+(2) Script from the Command-line:
+
+A Perl script is a text file which keeps perl code in it and it can be executed at command line by invoking the interpreter on your application, as in the following:
+$perl  script.pl          # Unix/Linux
+
+or 
+
+C:>perl script.pl         # Windows/DOS
+
+(3) Integrated Development Environment
+
+You can run Perl from a graphical user interface (GUI) environment as well. All you need is a GUI application on your system that supports Perl. You can download Padre, the Perl IDE. You can also use Eclipse Plugin EPIC - Perl Editor and IDE for Eclipse if you are familiar with Eclipse.
+
+Before proceeding to next chapter, make sure your environment is properly setup and working perfectly fine. If you are not able to setup the environment properly then you can take help from your system admininstrator.
+
+Al the examples given in subsequent chapters have been executed with v5.16.2 version available on CentOS flavor of Linux.
+
+ </h4>
+</body>
+</html>

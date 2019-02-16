@@ -1,0 +1,51 @@
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Orbitron:700|Arizonia' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<style type="text/css">
+h1{font-family:'Orbitron';
+	font-size:60px;}
+h3{font-family:'Orbitron';
+	font-size:30px;}
+h4{font-family:'Abel';}
+</style>
+</head>
+<body>
+<h1><strong>Datatypes</strong></h1>
+<h4>Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space in memory.
+Based on the data type of a variable, the interpreter allocates memory and decides what can be stored in the reserved memory. Therefore, by assigning different data types to variables, you can store integers, decimals, or strings in these variables.
+</h4>
+<h3><strong>Scalar Variables: </br></strong></h3>
+<h4>A scalar is a single unit of data. That data might be a integer number, floating point, a character, a string, a paragraph, or an entire web page. Simply saying it could be anything, but only a single thing.
+Exampe:-<br/>$age = 25;  # An integer assignment</br>
+$name = "John Paul";     # A string</br> 
+$salary = 1445.50;       # A floating point</br>
+
+print "Age = $age\n";</br>
+print "Name = $name\n";</br>
+print "Salary = $salary\n";</br></h4>
+<h3><strong>Arrays</strong></h3>
+<h4>An array is a variable that stores an ordered list of scalar values. Array variables are preceded by an "at" (@) sign. To refer to a single element of an array, you will use the dollar sign ($) with the variable name followed by the index of the element in square brackets.
+Example:</br>#!/usr/bin/perl</br>
+
+@ages = (25, 30, 40);</br>             
+@names = ("John Paul", "Lisa", "Kumar");</br>
+
+print "\$ages[0] = $ages[0]\n";</br>
+print "\$ages[1] = $ages[1]\n";</br>
+print "\$ages[2] = $ages[2]\n";</br>
+print "\$names[0] = $names[0]\n";</br>
+print "\$names[1] = $names[1]\n";</br>
+print "\$names[2] = $names[2]\n";</br> </h4>
+<h3><strong>Hashes</strong></h3>
+<h4>A hash is a set of key/value pairs. Hash variables are preceded by a percent (%) sign. To refer to a single element of a hash, you will use the hash variable name preceded by a "$" sign and followed by the "key" associated with the value in curly brackets.
+Example:<br/>
+#!/usr/bin/perl<br/>
+
+%data = ('John Paul', 45, 'Lisa', 30, 'Kumar', 40);<br/>
+
+print "\$data{'John Paul'} = $data{'John Paul'}\n";<br/>
+print "\$data{'Lisa'} = $data{'Lisa'}\n";<br/>
+print "\$data{'Kumar'} = $data{'Kumar'}\n";<br/> </h4>
+</body>
+</html>

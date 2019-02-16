@@ -1,0 +1,80 @@
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Orbitron:700|Arizonia' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<style type="text/css">
+h1{font-family:'Orbitron';
+	font-size:60px;}
+h4{font-family:'Abel';}
+</style>
+</head>
+<body>
+<h1><strong>Special Variables</strong></h1>
+<h4>$_/$ARG The default input and pattern-searching space.<br/>  
+$. The current input line number of the last filehandle that was read. An explicit close on the filehandle resets the line number. <br/> 
+$NR 
+$/ The input record separator; newline by default. If set to the null string, it treats blank lines as delimiters.  <br/> 
+$RS 
+$, The output field separator for the print operator.  <br/> 
+$OFS 
+$\ The output record separator for the print operator.  <br/> 
+$ORS $" Like "$," except that it applies to list values interpolated into a double-quoted string (or similar interpreted string).<br/>
+$LIST_SEPARATOR Default is a space.<br/>
+$; The subscript separator for multidimensional array emulation. Default is "\034".<br/>  
+$SUBSCRIPT_SEPARATOR 
+$^L What a format outputs to perform a formfeed. Default is "\f". <br/> 
+$FORMAT_FORMFEED 
+$: The current set of characters after which a string may be broken to fill continuation fields (starting with ^) in a format. Default is "\n"".<br/>  
+$FORMAT_LINE_BREAK_CHARACTERS 
+$^A The current value of the write accumulator for format lines.  <br/>
+$ACCUMULATOR  
+$# Contains the output format for printed numbers (deprecated).  <br/>
+$OFMT  
+$? The status returned by the last pipe close, backtick (``) command, or system operator.<br/>  
+$CHILD_ERROR  
+$! If used in a numeric context, yields the current value of the errno variable, identifying the last system call error. If used in a string context, yields the corresponding system error string.<br/>  
+$OS_ERROR or $ERRNO  
+$@ The Perl syntax error message from the last eval command.<br/>  
+$EVAL_ERROR  
+$$ The pid of the Perl process running this script.  <br/>
+$PROCESS_ID or $PID  
+$< The real user ID (uid) of this process.  <br/>
+$REAL_USER_ID or $UID  
+$> The effective user ID of this process.  <br/>
+$EFFECTIVE_USER_ID or $EUID  
+$( The real group ID (gid) of this process.  <br/>
+$REAL_GROUP_ID or $GID  
+$) The effective gid of this process.  <br/>
+$EFFECTIVE_GROUP_ID or $EGID  
+$0 Contains the name of the file containing the Perl script being executed.<br/>  
+$PROGRAM_NAME  
+$[ The index of the first element in an array and of the first character in a substring. Default is 0.  <br/>
+
+$] Returns the version plus patchlevel divided by 1000.  <br/>
+$PERL_VERSION  
+$^D The current value of the debugging flags.  <br/>
+$DEBUGGING  
+$^E Extended error message on some platforms.  <br/>
+$EXTENDED_OS_ERROR  
+$^F The maximum system file descriptor, ordinarily 2.<br/>  
+$SYSTEM_FD_MAX  
+$^H Contains internal compiler hints enabled by certain pragmatic modules.<br/>  
+ 
+$^I The current value of the inplace-edit extension. Use undef to disable inplace editing. <br/> 
+$INPLACE_EDIT  
+$^M The contents of $M can be used as an emergency memory pool in case Perl dies with an out-of-memory error. Use of $M requires a special compilation of Perl. See the INSTALL document for more information. <br/> 
+ 
+$^O Contains the name of the operating system that the current Perl binary was compiled for.<br/>  
+$OSNAME  
+$^P The internal flag that the debugger clears so that it doesn't debug itself.<br/>  
+$PERLDB  
+$^T The time at which the script began running, in seconds since the epoch.<br/>  
+$BASETIME  
+$^W The current value of the warning switch, either true or false. <br/> 
+$WARNING  
+$^X The name that the Perl binary itself was executed as.  <br/>
+$EXECUTABLE_NAME  
+$ARGV Contains the name of the current file when reading from  <br/>
+ </h4>
+</body>
+</html>
